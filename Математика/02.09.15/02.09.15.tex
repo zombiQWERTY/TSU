@@ -1,0 +1,541 @@
+\documentclass[a4paper, 11pt, oneside]{article}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
+\geometry{a4paper}
+\usepackage{ucs}
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{amsmath}
+
+
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+
+\sloppy
+
+
+\title{Математика}
+\author{Павел Зиновьев}
+
+\begin{document}
+\maketitle
+\newpage
+\tableofcontents
+\contentsname
+\newpage
+
+
+\section{Информация}
+Преподаватель: Христич Дмитрий Викторович (каб. 12-314)
+\subsection{Книги}
+
+Дмитрий Кузнецов - Сборник задач по высшей математике\\
+Под редакцией Ефимова, Демидович - сборник задач для {\itshape ВТУЗ}ов\\
+Данко, Попов, Кожевникова - Высшая математика в упражнениях и задачах\\
+Клетеник - сборник задач по аналитической геометрии
+
+\section{Матрицы}
+Матрицей размера $m\times n$ называется прямоугольная таблица чисел, состоящая из $m$ строк и $n$ столбцов. Числа этой таблицы называются элементами матрицы. Матрицы обозначаются $A, B, C,..$ или $a_{ij}, b_{ij}, c_{ij},..$\\
+Первый индекс - номер строки, второй индекс - номер столбца
+
+\subsection{Сложение матриц}
+
+Суммой двух матриц $A, B$ одинакового размера $m\times n$ называется матрица $C = A+B$ того же размера, каждый элемент которой равен сумме соответствующих элементов матриц $(a), (b)$
+$$
+	c_{ij} = a_{ij} + b_{ij}
+$$
+\begin{gather*}
+	\begin{pmatrix}
+		2& 0& -1\\
+		3& 4& 5
+	\end{pmatrix}
+	+
+	\begin{pmatrix}
+		-3& 6& 8\\
+		4& -2& 7
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		2+(-3)& 0+6& -1+8\\
+		3+4& 4+(-2)& 5+7
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		-1& 6& 7\\
+		7& 2& 12
+	\end{pmatrix}
+\end{gather*}
+
+\subsection{Вычитание матриц}
+
+Разностью двух матриц $A, B$ одинакового размера $m\times n$ называется матрица $C = A-B$ того же размера, каждый элемент которой равен разности соответствующих элементов матриц $(a), (b)$
+$$
+	c_{ij} = a_{ij} - b_{ij}
+$$
+\begin{gather*}
+	\begin{pmatrix}
+		2& 0& -1\\
+		3& 4& 5
+	\end{pmatrix}
+	-
+	\begin{pmatrix}
+		-3& 6& 8\\
+		4& -2& 7
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		2-(-3)& 0-6& -1-8\\
+		3-4& 4-(-2)& 5-7
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		5& -6& -9\\
+		-1& 6& -2
+	\end{pmatrix}
+\end{gather*}
+
+\subsection{Умножение матриц}
+
+При умножении матрицы $A$ на действительное число $\alpha$ получается матрица $B=\alpha A$ того же размера
+$$
+b_{ij}=\alpha a_{ij}
+$$
+\begin{gather*}
+	3 \times
+	\begin{pmatrix}
+		-2& 5\\
+		7& -6\\
+		1& 3
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		-2\times 3& 5\times 3\\
+		7\times 3& -6\times 3\\
+		1\times 3& 3\times 3
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		-6& 15\\
+		21& -18\\
+		3& 9
+	\end{pmatrix}
+\end{gather*}
+\begin{gather*}
+	\begin{pmatrix}
+		2& 5\\
+		-3& 4
+	\end{pmatrix}
+	+ 2 \times
+	\begin{pmatrix}
+		-7& 2\\
+		1& 0
+	\end{pmatrix}
+	-4 \times
+	\begin{pmatrix}
+		8& 15\\
+		6& 20
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		2& 5\\
+		-3& 4
+	\end{pmatrix}
+	+
+	\begin{pmatrix}
+		14& 4\\
+		2& 0
+	\end{pmatrix}
+	-
+	\begin{pmatrix}
+		32& 60\\
+		24& 80
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		-44& -51\\
+		-25& -76
+	\end{pmatrix}
+\end{gather*}
+
+\subsection{Транспонирование матриц}
+
+Транспонирование матрицы состоит в замене строк матрицы её столбцами с соответствующими номерами
+
+\begin{gather*}
+	B = A^T\\
+	b_(ij) = a_(ji)
+	\begin{pmatrix}
+		1&-2&4\\
+		-3&5&8
+	\end{pmatrix}
+	^T
+	=
+	\begin{pmatrix}
+		1&-3\\
+		-2&5\\
+		4&8
+	\end{pmatrix}
+\end{gather*}
+
+\subsection{Произведение матриц} % Не понятно
+
+Произведением матриц A и B называется матрица C, каждый элемент которой равен\\
+$c_{ij} = \sum\limits_{l=1}^n \times a_{il} \times b_{lj}$
+Для выполнения умножения матриц требуется чтобы количество столбцов первого множителя было равно количеству строк второго множителя
+
+\begin{gather*}
+	\begin{pmatrix}
+		1& 2& 5\\
+		4& 7& -1
+	\end{pmatrix}
+	\times
+	\begin{pmatrix}
+		2& -3\\
+		6& 8\\
+		-2& 1
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		1\times 2+2\times 6+5\times (-2)& 1\times (-3)+2\times 8+5\times 1\\
+		4\times 2+7\times 6+(-1)\times (-2)& 4\times (-3)+7\times 8+(-1)\times 1
+	\end{pmatrix}
+	=\\=
+	\begin{pmatrix}
+		4& 18\\
+		52& 43
+	\end{pmatrix}
+\end{gather*}
+
+\begin{gather*}
+	\begin{pmatrix}
+		2& -3\\
+		6& 8\\
+		-2& 1
+	\end{pmatrix}
+	\times
+	\begin{pmatrix}
+		1& 2& 5\\
+		4& 7& -1
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		2\times 1+(-3)\times 4& 2\times 2+(-3)\times 7& 2\times 5+(-3)\times (-1)\\
+		6\times 1+8\times 4& 6\times 2+8\times 7& 6\times 5+8\times (-1)\\
+		-2\times 1+1\times 4& -2*2+1\times 7& -2\times 5+1\times (-1)
+	\end{pmatrix}
+	=\\=
+	\begin{pmatrix}
+		-10& -17& 13\\
+		38& 68& 22\\
+		2& 3& -11
+	\end{pmatrix}
+\end{gather*}
+\\
+\begin{center}
+	{\itshape Свойство умножения матриц:}
+\end{center}
+\begin{gather*}
+	A\times B \not= B\times A\\
+	(A\times B)\times C = A\times (B\times C)
+\end{gather*}
+
+\begin{gather*}
+	\begin{pmatrix}
+		0& 0& 1\\
+		1& 1& 2\\
+		2& 2& 3\\
+		3& 3& 4
+	\end{pmatrix}
+	\times
+	\begin{pmatrix}
+		-1& -1\\
+		2& 2\\
+		1& 1
+	\end{pmatrix}
+	\times
+	\begin{pmatrix}
+		4\\
+		1
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		0+0+1& 0+0+1\\
+		-1+2+2& -1+2+2\\
+		-2+4+3& -2+4+3\\
+		-3+6+4& -3+6+4
+	\end{pmatrix}
+	\times
+	\begin{pmatrix}
+		4\\
+		1
+	\end{pmatrix}
+	=\\=
+	\begin{pmatrix}
+		1& 1\\
+		3& 3\\
+		5& 5\\
+		7& 7\\
+	\end{pmatrix}
+	\times
+	\begin{pmatrix}
+		4\\
+		1
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		4+1\\
+		12+3\\
+		20+5\\
+		28+7
+	\end{pmatrix}
+	=
+	\begin{pmatrix}
+		5\\
+		15\\
+		25\\
+		35
+	\end{pmatrix}
+\end{gather*}
+
+{\itshape Если количество строк и столбцов совпадает, то такая матрица называется квадратной}
+
+
+\subsection{Определители}
+
+Если в матрице есть чето там, то определитель и детерминант. Формула для вычисление определителей 2-го и 3-го порядков.\\
+Главная диагональ идет из левого верхнего угла в правый нижний. Побочная диагональ идет из правого верхнего угла в левый нижний.
+
+\subsubsection{Определитель квадратной матрицы 2-го порядка}
+Определитель квадратной матрицы 2-го порядка:
+\begin{gather*}
+	|A| = \det A = 
+	\begin{vmatrix}
+		a_{11}& a_{12}\\
+		a_{21}& a_{22}
+	\end{vmatrix}
+	=
+	a_{11}\times a_{22}-a_{12}\times a_{21}
+\end{gather*}
+Из произведения элементов главной диагонали вычесть произведение элементов побочной диагонали
+
+Примеры:
+\begin{gather*}
+	\begin{vmatrix}
+		-1& 4\\
+		-5& 2
+	\end{vmatrix}
+	=
+	-1\times 2-4\times (-5)=18
+\end{gather*}
+
+\begin{gather*}
+	\begin{vmatrix}
+		a+b& a-b\\
+		a-b& a+b
+	\end{vmatrix}
+	=
+	(a+b)^2-(a-b)^2 = a^2+2\times a\times b+b^2 - (a^2-2\times a\times b+b^2)
+	=\\=
+	a^2+2\times a\times b+b^2-a^2+2\times a\times b-b^2=4\times a\times b
+\end{gather*}
+\begin{gather*}
+	\begin{vmatrix}
+		\cos \alpha& \sin \alpha\\
+		-\sin \alpha& \cos \alpha
+	\end{vmatrix}
+	=
+	\cos^2 \alpha - \sin \alpha \times (-\sin \alpha) = \cos^2\alpha + \sin^2\alpha = 1
+\end{gather*}
+
+\subsubsection{Определитель квадратной матрицы 3-го порядка}
+Определитель квадратной матрицы 3-го порядка:
+\begin{gather*}
+	|A|=
+	\begin{vmatrix}
+		a_{11}& a_{12}& a_{13}\\
+		a_{21}& a_{22}& a_{23}\\
+		a_{31}& a_{32}& a_{33}
+	\end{vmatrix}
+	=
+	a_{11}\times a_{22}\times a_{33}+a_{12}\times a_{23}\times a_{31} + a_{31} 
+\end{gather*}
+
+%Списать из тетради картинки и произведения диагоналей (про определитель)
+
+
+\begin{gather*}
+	\begin{vmatrix}
+		3& 4& -5\\
+		8& 7& -2\\
+		2& -1& 8
+	\end{vmatrix}
+	=3\times 7\times 8+4\times (-2)\times 2+8
+	\times\\\times
+	(-1)\times (-5)-(-5)\times 7\times 2-4\times 8\times 8-(-2)\times (-1)\times 3=0
+\end{gather*}
+
+
+\begin{gather*}
+	\begin{vmatrix}
+		3& -2& 1\\
+		1& 5& -2\\
+		-1& 2& -1
+	\end{vmatrix}
+	=3\times5(-1)+1\times2\times1+(-2)\times(-2)\times1-1\times5\times(-1)-2
+	\times\\\times
+	(-2)\times3-1\times(-2)\times(-1)=-15+2-4+5+12-2=-2
+\end{gather*}
+
+\begin{gather*}
+	\begin{vmatrix}
+		2& 2& -1\\
+		1& 1& -2\\
+		5& -3& 1
+	\end{vmatrix}
+	=2+(-20)+3+5-12-2=-24
+\end{gather*}
+
+\begin{gather*} % Дорешать надо
+	\begin{vmatrix}
+		1& 2& 3\\
+		4& 5& 6\\
+		7& 8& 9
+	\end{vmatrix}
+	=0
+\end{gather*}
+
+
+\subsection{Задание на дом}
+Решить уравнения:
+
+\begin{gather*}
+	\begin{vmatrix}
+		x& x+1\\
+		-4& x+1
+	\end{vmatrix}
+	=0
+\end{gather*}
+
+\begin{gather*}
+	\begin{vmatrix}
+		\cos 8x& \sin 5x\\
+		-\sin 8x& \cos 5x
+	\end{vmatrix}
+	=0
+\end{gather*}
+
+\begin{gather*}
+	\begin{vmatrix}
+		3& x& -x\\
+		2& -1& 3\\
+		x+10& 1& 1
+	\end{vmatrix}
+	=0
+\end{gather*}
+
+\begin{gather*}
+	\begin{vmatrix}
+		x& x+1& x+2\\
+		x+3& x+4& x+5\\
+		x+6& x+7& x+8
+	\end{vmatrix}
+	=0
+\end{gather*}
+
+\begin{gather*}
+	\begin{pmatrix}
+		1& -2\\
+		3& -4
+	\end{pmatrix}^3
+\end{gather*}
+
+\begin{gather*}
+	\begin{pmatrix}
+		1& a\\
+		0& 1
+	\end{pmatrix}^n, a \in R
+	=0
+\end{gather*}
+
+\begin{gather*}
+	\begin{pmatrix}
+		a& 1\\
+		0& a
+	\end{pmatrix}^n, a \in R
+\end{gather*}
+
+\begin{gather*}
+	\begin{pmatrix}
+		\cos \alpha &  \sin \alpha\\
+		-\sin \alpha &  \cos \alpha
+	\end{pmatrix}^n
+\end{gather*}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+\end{document}
