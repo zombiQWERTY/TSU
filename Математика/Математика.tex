@@ -408,77 +408,144 @@ $c_{ij} = \sum\limits_{l=1}^n \times a_{il} \times b_{lj}$
 	=0
 \end{gather*}
 
+\subsection{Метод Краймера}
+\begin{gather*}
+	\begin{cases}
+		3x-4y=1,\\
+		3x+4y=18
+	\end{cases}\\
+	\varDelta =
+	\begin{vmatrix}
+		3& -4\\
+		3& 4
+	\end{vmatrix}
+	=
+	12+12=0\\
+	\varDelta_1 =
+	\begin{vmatrix}
+		1& -4\\
+		18& 4
+	\end{vmatrix}
+	=76\\
+	\varDelta_2 =
+	\begin{vmatrix}
+		3& 1\\
+		3& 18
+	\end{vmatrix}
+	=51\\
+	x = \frac{76}{24}=2\frac{1}{8}
+\end{gather*}
+\begin{gather*}
+	\begin{cases}
+		2x-y=1,\\
+		4x+2y=3
+	\end{cases}\\
+	\varDelta = 0\\
+	\varDelta_x =
+	\begin{vmatrix}
+		1& -1\\
+		38& -2
+	\end{vmatrix}
+	=1\not= 0\\
+\end{gather*}
+Значит, решений нет
 
-\subsection{Задание на дом}
-Решить уравнения:
+\begin{gather*}
+	\begin{cases}
+		3x+y=5,\\
+		-6x-2y=-10
+	\end{cases}\\
+	\varDelta =0\\
+	\varDelta_x =0\\
+	\varDelta_y =0\\
+\end{gather*}
+Значит, бесконечно много решений (прямые лежат друг на друге)
+
+\begin{gather*}
+	\begin{cases}
+		7x_1+2x_2+3x_3=15,\\
+		5x_1-3x_2+2x_3=15,\\
+		10x_1-11x_2+5x_3=36
+	\end{cases}\\
+	\varDelta =
+	\begin{vmatrix}
+		7& 2& 3\\
+		5& -3& 2\\
+		10& -11& 5
+	\end{vmatrix}=-105-165+40+90+154+50=-36\\
+	\varDelta_{x} =
+	\begin{vmatrix}
+		15& 2& 3\\
+		15& -3& 2\\
+		36& -11& 5
+	\end{vmatrix}=-225-\dots=-72\\
+	\varDelta_{y} =
+	\begin{vmatrix}
+		7& 15& 3\\
+		5& 15& 2\\
+		10& 36& 5
+	\end{vmatrix}=525+540+300-450-375-504=36\\
+	\varDelta_{z} =
+	\begin{vmatrix}
+		7& 2& 15\\
+		5& -3& 15\\
+		10& -4& 36
+	\end{vmatrix}=ZED\\
+	x_1=\frac{\varDelta}{\varDelta_x}=\frac{-36}{-72}\\
+	x_2=\frac{\varDelta}{\varDelta_y}=\frac{-36}{36}=-1\\
+	x_3=\frac{\varDelta}{\varDelta_z}=\frac{-36}{ZED}\\
+\end{gather*}
+
+\begin{gather*}
+	\begin{cases}
+		2x_1+x_2 \dots  =5,\\
+		x_1 \dots +3x_3=16,\\
+		\dots 5x_2-x_3=10
+	\end{cases}\\
+	\varDelta =
+	\begin{vmatrix}
+		2& 1& 0\\
+		1& 0& 3\\
+		0& 5& -1
+	\end{vmatrix}=0+0+0-0+1-30=-29\\
+	\varDelta_{x1} =
+	\begin{vmatrix}
+		5& 1& 0\\
+		16& 0& 3\\
+		10& 5& -1
+	\end{vmatrix}=0+30+0-0+16-75=-29\\
+	\varDelta_{x2} =
+	\begin{vmatrix}
+		2& 5& 0\\
+		1& 16& 9\\
+		0& 10& -1
+	\end{vmatrix}=-32+0+0-0+5-60=-87\\
+	\varDelta_{x3} =
+	\begin{vmatrix}
+		2& 1& 5\\
+		1& 0& 16\\
+		0& 5& 10
+	\end{vmatrix}=0+0+25-0-10-160=-145\\
+	x_1=-1\\
+	x_2=3\\
+	x_3=5
+\end{gather*}
 
 \begin{gather*}
 	\begin{vmatrix}
-		x& x+1\\
-		-4& x+1
+		1& 1& 1& 1\\
+		1& -1& 2& 2\\
+		1& 1& -1& 3\\
+		1& 1& 1& -1
 	\end{vmatrix}
-	=0
-\end{gather*}
-
-\begin{gather*}
+	=
 	\begin{vmatrix}
-		\cos 8x& \sin 5x\\
-		-\sin 8x& \cos 5x
-	\end{vmatrix}
-	=0
+		1& 1& 1& 1\\
+		0& -2& 1& 1\\
+		0& 0& -2& 2\\
+		0& 0& 0& -2
+	\end{vmatrix}=1(-2)(-2)(-2)=-8
 \end{gather*}
-
-\begin{gather*}
-	\begin{vmatrix}
-		3& x& -x\\
-		2& -1& 3\\
-		x+10& 1& 1
-	\end{vmatrix}
-	=0
-\end{gather*}
-
-\begin{gather*}
-	\begin{vmatrix}
-		x& x+1& x+2\\
-		x+3& x+4& x+5\\
-		x+6& x+7& x+8
-	\end{vmatrix}
-	=0
-\end{gather*}
-
-\begin{gather*}
-	\begin{pmatrix}
-		1& -2\\
-		3& -4
-	\end{pmatrix}^3
-\end{gather*}
-
-\begin{gather*}
-	\begin{pmatrix}
-		1& a\\
-		0& 1
-	\end{pmatrix}^n, a \in R
-	=0
-\end{gather*}
-
-\begin{gather*}
-	\begin{pmatrix}
-		a& 1\\
-		0& a
-	\end{pmatrix}^n, a \in R
-\end{gather*}
-
-\begin{gather*}
-	\begin{pmatrix}
-		\cos \alpha &  \sin \alpha\\
-		-\sin \alpha &  \cos \alpha
-	\end{pmatrix}^n
-\end{gather*}
-
-
-
-
-
 
 
 
