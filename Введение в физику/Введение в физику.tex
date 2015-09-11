@@ -1,4 +1,4 @@
-\documentclass[a4paper, 11pt, oneside]{article}
+\documentclass[a4paper, 12pt, oneside]{article}
 \usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm,bindingoffset=0cm]{geometry}
 \geometry{a4paper}
 \usepackage{ucs,graphicx,amssymb,amsmath,mathtext}
@@ -75,8 +75,88 @@
 \section{Кинематика}
 Основной задачей кинематики является нахождение положения тела в любой момент времени, если известна
  $x_0, y_0, V_0, a_0$
-\section{Задание на дом}
-Вспомнить что такое вектора и производные. 
+
+\subsection{Физические модели}
+\subsubsection{Радиус вектора}
+Материальная точка: масса есть, размеров нет\\
+Абсолютно твердое тело: две материальные точки в теле, расстояние между которыми не изменяется ни при каких обстоятельствах\\
+\subsubsection{Векторный способ описания движений частиц}
+Радиус вектор --- это вектор, который начинается в точке начала отсчета координат и заканчивается на точке. При перемещении по любой траектории радиус-вектор меняет свои координаты и длину. Таким образом радиус-вектор --- функция времени: $\overrightarrow{r}(t)$\\
+Единичные орты (вектора) --- вектор, направленный вдоль координатной оси. Длина вектора равна единице\\
+$\overrightarrow{r}(t)=\overrightarrow{i} r_x+\overrightarrow{j} r_y+\overrightarrow{k} r_z$\\
+$\overrightarrow{r}(t)=\overrightarrow{i} x(t)+\overrightarrow{j} y(t)+\overrightarrow{k} z(t)$\\
+
+Перемещение за единицу времени ---
+$$
+	\overrightarrow{V}(t)=\frac{d\overrightarrow{r}}{dt}
+$$
+Изменение скорости за единицу времени ---
+$$
+	\overrightarrow{a}(t)=\frac{d^2r}{dt^2}
+$$
+$$
+	\overrightarrow{V}(t)=\overrightarrow{i}V_x(t)+\overrightarrow{j}V_y(t)+\overrightarrow{k}V_z(t)
+$$
+$$
+	\overrightarrow{a}(t)=\overrightarrow{i}a_x(t)+\overrightarrow{j}a_y(t)+\overrightarrow{k}a_z(t)
+$$
+Если известны: $x(t),y(t),z(t)$, то можно определить проекции скорости на оси: $V_x(t)=\frac{dx}{dt}, V_y(t)=\frac{dy}{dt}, V_z(t)=\frac{dz}{dt}$\\\\
+Ускорение: $a_x(t)=\frac{dV_x}{dt}, a_y(t)=\frac{dV_y}{dt}, a_z(t)=\frac{dV_z}{dt}$\\
+\begin{gather*}
+	r=\sqrt{x^2+y^2+z^2}\\
+	V=\sqrt{V^2+V^2+V^2}\\
+	a=\sqrt{a^2+a^2+a^2}
+\end{gather*}
+\newpage
+\subsection{Прямая задача кинематики}
+Радиус-вектор частицы зависит от времени по закону:
+$$
+\overrightarrow{r}(t)=\overrightarrow{i}A\frac{t}{\tau}+\overrightarrow{j}B(\frac{t}{\tau})^2
+$$
+Найти тангенс угла между вектором скорости и осью $x$ в момент времени $t=\tau=1с$, $A=B=C=1м$\\
+$$
+	\tg\alpha = \frac{V_y}{V_x}
+$$
+$$
+	V_y=\frac{B(\frac{t}{\tau})^2}{dt} = \frac{B}{\tau^2}2t=2
+$$
+$$
+\overrightarrow{r}(t)=\overrightarrow{i}A\frac{t}{\tau}+\overrightarrow{j}B(\frac{t}{\tau})^2+\overrightarrow{k}C(\frac{t}{\tau})^3
+$$
+$$
+V=\sqrt{V_x^2+V_y^2+V_z^2}=3.74
+$$
+
+\subsection{Обратная задача кинематики}
+
+Если известны зависимости $a_x(t), a)y(t),a_z(t)$, $x_0, y_0, z_0, V_{0x},V_{0y}, V_{oz}$\\
+$V_x=V_{0x}+\int_0^t a_y(t)dt$\\
+$V_y=V_{0y}+\int_0^t a_y(t)dt$\\
+$V_z=V_{0a}+\int_0^t a_y(t)dt$\\
+$z=z_0+\int_0^t V_z(t)dt$
+Сайт Семин §Прямая задача по механике(тема 1) решить 12 задач
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
